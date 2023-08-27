@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo do Acertou: Perdeu!</title>
+</head>
+<body>
+
+<script lang="JavaScript">
+
+var a, b, c;
+
+b = 0;
+c = 0;
+
+do {
+    a = parseFloat(window.prompt("Quantos jogadores vão jogar (Min. 2 e Max. 5): "));
+} while (a < 2 || a > 5);
+
+b = Math.floor(Math.random() * 100) + 1; // Adicionado +1 para gerar número de 1 a 100
+
+do {
+    c = parseFloat(window.prompt("Digite um número: "));
+
+    if (c > b) {
+        alert("O número digitado é maior !!!");
+    } else if (c < b) {
+        alert("O número digitado é menor !!!");
+    } else {
+        alert("Você acertou !!!");
+        break;
+    }
+} while (true);
+
+alert("Você perdeu !!!");
+
+</script>   
+</body>
+</html>
